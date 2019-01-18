@@ -1,0 +1,96 @@
+/*CS261- Assignment 2 - Q2*/
+/*Name: Rebecca L. Taylor
+ * Date: 23 April 2018
+ * Solution description: Answers to amortized analysis questions */
+
+1. How many cost units are spent in the entire process of performing 40 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will double in capacity each time a new item is added to an already full dynamic array? As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the average big-oh complexity for a push?
+
+Initial capacity 8:
+Pushes 1 through 8    = 8 units
+
+New capacity 16:
+Cost of resize = O(n) = 8 units moved
+Pushes 9 through 16   = 8 units
+
+New capacity 32:
+Cost of resize = O(n) = 16 units moved
+Pushes 17 through 32  = 16 units
+
+New capacity 64:
+Cost of resize = O(n) = 32 units moved
+Pushes 33 through 40  = 8 units
+
+*** 96 total units / 40 pushes = 2.4 average units per push ***
+
+2. How many cost units are spent in the entire process of performing 40 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will grow by a constant 2 spaces each time a new item is added to an already full dynamic array? As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the average big-oh complexity for a push?
+
+Initial capacity 8:
+Pushes 1 through 8    = 8 units
+
+New capacity 10:
+Cost of resize = O(n) = 8 units moved
+Pushes 9 and 10       = 2 units
+
+New capacity 12:
+Cost of resize = O(n) = 10 units moved
+Pushes 11 and 12      = 2 units
+
+New capacity 14:
+Cost of resize = O(n) = 12 units moved
+Pushes 13 and 14      = 2 units
+
+New capacity 16:
+Cost of resize = O(n) = 14 units moved
+Pushes 15 and 16      = 2 units
+
+New capacity 18:
+Cost of resize = O(n) = 16 units moved
+Pushes 17 and 18      = 2 units
+
+New capacity 20:
+Cost of resize = O(n) = 18 units moved
+Pushes 19 and 20      = 2 units
+
+New capacity 22:
+Cost of resize = O(n) = 20 units moved
+Pushes 21 and 22      = 2 units
+
+New capacity 24:
+Cost of resize = O(n) = 22 units moved
+Pushes 23 and 24      = 2 units
+
+New capacity 26:
+Cost of resize = O(n) = 24 units moved
+Pushes 25 and 26      = 2 units
+
+New capacity 28:
+Cost of resize = O(n) = 26 units moved
+Pushes 27 and 28      = 2 units
+
+New capacity 30:
+Cost of resize = O(n) = 28 units moved
+Pushes 29 and 30      = 2 units
+
+New capacity 32:
+Cost of resize = O(n) = 30 units moved
+Pushes 31 and 32      = 2 units
+
+New capacity 34:
+Cost of resize = O(n) = 32 units moved
+Pushes 33 and 34      = 2 units
+
+New capacity 36:
+Cost of resize = O(n) = 34 units moved
+Pushes 35 and 36      = 2 units
+
+New capacity 38:
+Cost of resize = O(n) = 36 units moved
+Pushes 37 and 38      = 2 units
+
+New capacity 40:
+Cost of resize = O(n) = 38 units moved
+Pushes 39 and 40      = 2 units
+
+*** 408 total units / 40 pushes = 10.2 average units per push ***
+
+
